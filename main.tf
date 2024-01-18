@@ -2,14 +2,19 @@
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "3.71.0"
+      version = "3.42.0"
     }
   }
 }
 
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
-  features {}
+  features {
+           client_id = "db41879d-b09f-452c-b22b-85130d37398a"
+           client_secret = "KV.8Q~xK1mmrfY3N2lUIMZXa4CRe6PQr6yHu4caQ"
+           tenant_id = "750f2040-ab7f-42ed-8001-36ba05e30750"
+           subscription_id = "a1085f45-3c41-4277-b3a7-cd100aaffb99"
+  }
 }
 
 module "resourcegroup" {
